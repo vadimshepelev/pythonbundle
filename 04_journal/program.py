@@ -24,7 +24,7 @@ def run_event_loop():
         if cmd == 'l':
             list_entries(journal_data)
         elif cmd == 'a':
-            add_entry(journal_data)
+            journal.add_entry(journal_data)
         elif cmd != 'x' and cmd:
             print("Sorry, we don't understand '{}'.".format(cmd))
 
@@ -37,12 +37,6 @@ def list_entries(data):
     entries = reversed(data)
     for idx, entry in enumerate(entries):
         print('* [{}] {}'.format(idx + 1, entry))
-
-
-def add_entry(data):
-    text = input('Type your entry, <enter> to exit: ')
-    journal.add_entry(text, data)
-    # data.append(text)
 
 
 main()
