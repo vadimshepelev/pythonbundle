@@ -39,6 +39,9 @@ def list_entries(data):
         print('* [{}] {}'.format(idx + 1, entry))
 
 
-main()
+# print(__file__)
+# print(__name__)
+# main()
 
-
+if __name__=='__main__':
+    main()
